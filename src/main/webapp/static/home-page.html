@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <title>Personal Managment</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+
+    <script src="/js/jquery-1.10.2.js"></script>
+    <script src="/js/controller.js"></script>
+</head>
+
+
+<body>
+
+<div id="logOutDiv" style="float: right; display: none">
+    <button type="button" class="btn btn-lg btn-primary btn-block" click="logOut()">Logout</button>
+</div>
+
+
+<div class="container" id="formRegist" style="display: none">
+    <div class="jumbotron" style="padding-bottom:0px;">
+        <h2>Net Credit </h2>
+    </div>
+    <form class="form-signin" role="form">
+        <div style="color: red">*</div>
+        <input type="name" id="name" ng-model="Name" class="form-control" placeholder="Name" required autofocus="">
+        <div style="color: red">*</div>
+        <input type="password" id="password" ng-model="Password"  class="form-control" placeholder="password" required autofocus="">
+        <input type="name" id="phone" ng-model="Phone" class="form-control" placeholder="phone" required=""  required autofocus="">
+        <input type="Date" id="birthday" ng-model="Birthday"class="form-control" placeholder="birthday" required="" autofocus="">
+        <input type="number" id="monthSalary" ng-model="MonthSalary" class="form-control" placeholder="monthSalary" required="">
+        <input type="number" id="currentLiability" ng-model="CurreentLia" class="form-control" placeholder="currentLiability" required="">
+        <button type="button" class="btn btn-lg btn-primary btn-block" ng-click="onClickRegister()">Register</button>
+        <button type="button" class="btn btn-lg btn-primary btn-block" ng-click="showSingUP()">Sign In </button>
+    </form>
+</div>
+
+<div  class="container"  id="mypage" style="display: none">
+    <button type="button" class="btn btn-lg btn-primary btn-block" onclick="addNewTask()">Add New Task</button>
+    <div id="result">
+
+    </div>
+</div>
+
+<div  class="container"  id="addTask" style="display: none">
+    <input type="name" id="taskName"     required autofocus="" placeholder="task name"> <br>
+    <input type="name" id="taskDescriptiom"  required autofocus="" placeholder="task description"><br>
+    <label>Status</label><br>
+    <select id="taskStatus">
+        <option value="Open">Open</option>
+        <option value="Closed">Closed</option>
+        <option value="Delayed">Delayed</option>
+    </select><br>
+    <label>Is Finish</label> <br>
+    <input type="checkbox" id="taskFinish"   required autofocus="" placeholder="is finish"><br>
+    <input type="date" id="taskDeadline"    required autofocus="" placeholder="deadline time"><br>
+    <button type="button" class="btn btn-lg btn-primary btn-block" onclick="saveNewTask()">SaveTask</button>
+</div>
+
+
+
+<div class="container"  id="singUp" ng-show="showSingIn" style="display: block">
+    <div class="jumbotron" style="padding-bottom:0px;">
+        <h2>Personal task management</h2>
+    </div>
+    <div class="form-signin" role="form">
+        <input type="name"  id="nameLogin" class="form-control" placeholder="Name" required="" autofocus="">
+        <input type="password" id="passwordLogin" class="form-control" placeholder="Password" required="" autofocus="">
+        <button type="button" class="btn btn-lg btn-primary btn-block" onclick="onLogin()">Log In</button>
+        <button type="button" class="btn btn-lg btn-primary btn-block" onclick="onRegister()">Register</button>
+    </div>
+</div>
+</body>
+<style>
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+</style>
+</html>

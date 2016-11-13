@@ -1,0 +1,10 @@
+com\evgo\model\LoginUser.class
+com\evgo\controller\MainController.class
+com\evgo\repository\PersonalRepoImpl.class
+com\evgo\service\PersonalServiceImpl.class
+com\evgo\model\Status.class
+com\evgo\model\User.class
+com\evgo\model\AddTask.class
+com\evgo\model\Task.class
+com\evgo\service\PersonalService.class
+com\evgo\repository\PersonalRepo.class
